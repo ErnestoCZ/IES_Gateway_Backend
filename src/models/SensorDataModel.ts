@@ -5,6 +5,11 @@ export const SensorDataModel: ModelAttributes = {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
+    autoIncrement: true,
+  },
+  Device: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
   Timestamp: {
     type: DataTypes.INTEGER,

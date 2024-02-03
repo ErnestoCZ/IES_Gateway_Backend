@@ -28,8 +28,10 @@ export const initORM = async (
   //Init models to sequelize
   sequelize.define("SensorData", SensorDataModel, {
     freezeTableName: true,
+    timestamps: true,
   });
 
+  //TODO Update DB using Migration
   await sequelize.sync({ alter: true });
 };
 
@@ -49,18 +51,4 @@ app.listen(port, async () => {
   console.log("Server started! on port: " + port.toString());
 
   await initORM("IESGateway", "root", "IESGateway");
-
-  try {
-    const Ernest = await sequelize.models.SensorData.create({
-      Timestamp: 1234,
-      MAC: "MAC1",
-      ForceX: 34.2,
-      ForceY: 32.1,
-      ForceZ: 47,
-      Temperature: 26,
-    });
-    console.log("Data has been succesfull saved");
-  } catch (error) {
-    console.log("Data has not been succesfull saved!");
-  }
 });
