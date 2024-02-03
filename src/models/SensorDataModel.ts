@@ -30,8 +30,4 @@ export const SensorDataModel: ModelAttributes = {
     type: DataTypes.FLOAT,
     allowNull: false,
   },
-  testAttr: {
-    type: DataTypes.FLOAT,
-    allowNull: true,
-  },
 };
