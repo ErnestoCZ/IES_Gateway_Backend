@@ -69,5 +69,5 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 app.listen(port, async () => {
   console.log("Server started! on port: " + port.toString());
 
-  await initORM("IESGateway2", "root", "IESGateway");
+  await initORM("IESGateway", "root", "IESGateway");
 });
