@@ -1,19 +1,10 @@
-import {
-  Boolean,
-  Number,
-  String,
-  Literal,
-  Array,
-  Tuple,
-  Record,
-  Union,
-} from "runtypes";
-import { ARRAY } from "sequelize";
+import { Number, String, Record, Union } from "runtypes";
+import { DATE } from "sequelize";
 
 //TODO: modify Structure to be able to send more SensorData at once
 export const insertSensorDataStructure = Record({
   Device: String,
-  Timestamp: Number,
+  Timestamp: String,
   MAC: String,
   ForceX: Number,
   ForceY: Number,
@@ -32,7 +23,7 @@ export const deleteSensorDataStucture = Record({
 //TODO Structure to update target fields
 const updateSensorDataStructure = Record({
   Device: String,
-  Timestamp: Number,
+  Timestamp: String,
   MAC: String,
   ForceX: Number,
   ForceY: Number,

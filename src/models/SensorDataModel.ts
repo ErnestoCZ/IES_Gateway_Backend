@@ -12,7 +12,7 @@ export const SensorDataModel: ModelAttributes = {
     allowNull: false,
   },
   Timestamp: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   MAC: {
