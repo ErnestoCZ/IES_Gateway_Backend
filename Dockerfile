@@ -18,4 +18,4 @@ COPY --from=Build /app/dist dist
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ]
+CMD [ "node", "./dist/app.js" ]
