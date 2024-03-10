@@ -1,5 +1,4 @@
 import { Number, String, Record, Union } from "runtypes";
-import { DATE } from "sequelize";
 
 //TODO: modify Structure to be able to send more SensorData at once
 export const insertSensorDataStructure = Record({

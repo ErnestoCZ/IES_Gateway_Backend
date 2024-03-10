@@ -6,7 +6,5 @@ const router = Router();
 router.post("/", storeData);
 router.get("/", fetchData);
 router.delete("/", deleteData);
-//TODO put route to changedata
-// router.put("/", )
 
 export default router;
